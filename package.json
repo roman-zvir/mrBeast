@@ -1,0 +1,13 @@
+{
+  "name": "mrbeast",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MrZvir MVP demo",
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
