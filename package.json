@@ -6,17 +6,18 @@
   "type": "module",
   "scripts": {
     "test": "node --test \"tests/unit/**/*.test.js\"",
-    "test:coverage": "c8 --reporter=html npm test",
-    "test:broken": "cross-env BUG_MODE=1 node --test \"tests/unit/**/*.test.js\"",
-    "e2e": "playwright test",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "test:coverage": "node ./node_modules/c8/bin/c8.js --reporter=html --reporter=text node --test \"tests/unit/**/*.test.js\"",
+    "test:broken": "node ./node_modules/cross-env/src/bin/cross-env.js BUG_MODE=1 node --test \"tests/unit/**/*.test.js\"",
+    "e2e": "node ./node_modules/@playwright/test/cli.js test",
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 0.0.0.0 --port 4173",
+    "lint": "node ./node_modules/eslint/bin/eslint.js .",
+    "format": "node ./node_modules/prettier/bin/prettier.cjs --write ."
   },
   "devDependencies": {
     "@playwright/test": "^1.43.0",
+    "@sentry/vite-plugin": "^5.2.0",
     "c8": "^10.1.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
@@ -25,6 +26,7 @@
     "vite": "^8.0.10"
   },
   "dependencies": {
+    "@sentry/browser": "^10.50.0",
     "posthog-js": "^1.372.3"
   }
 }
