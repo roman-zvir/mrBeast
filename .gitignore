@@ -30,3 +30,8 @@ Desktop.ini
 # Local caches
 .cache/
 *.pdf
+
+# Test artifacts
+coverage/
+playwright-report/
+test-results/

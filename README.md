@@ -17,5 +17,18 @@ npm install
 ## Run Locally
 Open public/index.html in your browser (double-click works).
 
+## Testing
+```bash
+npm install
+npm test
+npm run test:coverage
+npm run e2e
+```
+
+## Broken Test Demo
+```bash
+npm run test:broken
+```
+
 ## Live Demo
 [Live Demo](#)
