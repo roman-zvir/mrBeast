@@ -24,5 +24,13 @@
         "varsIgnorePattern": "^_"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["vite.config.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
 }

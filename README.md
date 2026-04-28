@@ -108,7 +108,7 @@ This intentionally enables `BUG_MODE=1` so the `calculateTotal` unit test fails 
 - PostHog captures CTA clicks, task creation, completion, deletion, urgent-filter usage, and simulated errors.
 - Sentry captures simulated client errors when `VITE_SENTRY_DSN` is configured.
 - Vite source maps are enabled to support clearer production debugging.
-- When `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` are available during build, `vite.config.js` uploads source maps and creates a release automatically.
+- When `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` are available during build, `vite.config.js` uploads source maps and creates a release automatically; if upload fails, the build continues and logs a warning.
 
 ## Collaboration Workflow
 
