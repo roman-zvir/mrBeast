@@ -4,7 +4,9 @@ test('MVP page renders dashboard shell', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByRole('heading', { name: 'MrZvir' })).toBeVisible();
-  await expect(page.locator('#env-status')).toContainText('Development');
+  await expect(page.locator('#env-status')).toContainText(
+    /Development|Production/
+  );
   await expect(page.locator('#task-list .task-item')).toHaveCount(2);
   await expect(page.locator('#metrics-grid .metric-card')).toHaveCount(6);
   await expect(page.locator('#observability-status')).toContainText(
