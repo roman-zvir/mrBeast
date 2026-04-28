@@ -26,7 +26,15 @@ Desktop.ini
 # Environment variables and secrets
 .env
 .env.*
+!.env.example
 
 # Local caches
 .cache/
 *.pdf
+.pdf_pages/
+.pdfenv/
+
+# Test artifacts
+coverage/
+playwright-report/
+test-results/

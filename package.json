@@ -3,11 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "description": "MrZvir MVP demo",
+  "type": "module",
   "scripts": {
-    "test": "node --test",
-    "lint": "eslint ."
+    "test": "node --test \"tests/unit/**/*.test.js\"",
+    "test:coverage": "node ./node_modules/c8/bin/c8.js --reporter=html --reporter=text node --test \"tests/unit/**/*.test.js\"",
+    "test:broken": "node ./node_modules/cross-env/src/bin/cross-env.js BUG_MODE=1 node --test \"tests/unit/**/*.test.js\"",
+    "e2e": "node ./node_modules/@playwright/test/cli.js test",
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 0.0.0.0 --port 4173",
+    "lint": "node ./node_modules/eslint/bin/eslint.js .",
+    "format": "node ./node_modules/prettier/bin/prettier.cjs --write ."
   },
   "devDependencies": {
-    "eslint": "^8.57.0"
+    "@playwright/test": "^1.43.0",
+    "@sentry/vite-plugin": "^5.2.0",
+    "c8": "^10.1.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "http-server": "^14.1.1",
+    "prettier": "^3.8.3",
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "@sentry/browser": "^10.50.0",
+    "posthog-js": "^1.372.3"
   }
 }

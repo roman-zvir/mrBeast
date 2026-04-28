@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MrZvir | Delivery Console</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell"></div>
+    <main class="app-shell">
+      <section class="hero-panel">
+        <p class="eyebrow">MVP Delivery Console</p>
+        <h1>MrZvir</h1>
+        <p class="hero-copy">
+          A compact workspace for lab-driven delivery: Git workflow, test
+          coverage, CI visibility, product analytics, and production monitoring
+          in one place.
+        </p>
+        <div class="hero-meta">
+          <div class="hero-card">
+            <span class="meta-label">Environment</span>
+            <strong id="env-status">Loading...</strong>
+          </div>
+          <div class="hero-card">
+            <span class="meta-label">Assistant</span>
+            <strong id="status">Loading...</strong>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button id="cta" class="primary-button">Click me</button>
+          <button id="simulate-error" class="ghost-button" type="button">
+            Simulate error
+          </button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Lab 5</p>
+              <h2>Tracked task board</h2>
+            </div>
+            <button id="urgent-btn" class="chip-button" type="button">
+              Only urgent
+            </button>
+          </div>
+
+          <form id="task-form" class="task-form">
+            <label>
+              <span>Task title</span>
+              <input
+                type="text"
+                id="task-input"
+                placeholder="Enter new task"
+                required
+              />
+            </label>
+            <label>
+              <span>Priority</span>
+              <select id="task-priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="task-category">
+                <option value="analytics">Analytics</option>
+                <option value="delivery">Delivery</option>
+                <option value="quality">Quality</option>
+                <option value="ops">Ops</option>
+              </select>
+            </label>
+            <button id="add-task-btn" class="primary-button" type="submit">
+              Add task
+            </button>
+          </form>
+
+          <ul id="task-list" class="task-list"></ul>
+        </article>
+
+        <article class="panel metrics-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Labs 2-6</p>
+              <h2>Quality and observability snapshot</h2>
+            </div>
+          </div>
+          <div id="metrics-grid" class="metrics-grid"></div>
+          <div class="alert-box">
+            <span class="alert-dot"></span>
+            <p id="observability-status">Observability stack ready.</p>
+          </div>
+        </article>
+
+        <article class="panel timeline-panel">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Lab coverage</p>
+              <h2>Requirements map</h2>
+            </div>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <strong>Lab 1</strong>
+              <p>
+                Repository hygiene, branching workflow, README, ignore rules.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <strong>Lab 2</strong>
+              <p>
+                Unit tests, mocks, coverage, E2E checks, broken-mode regression.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <strong>Lab 3</strong>
+              <p>
+                Build automation, linting, preview flow, environment separation.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <strong>Lab 4</strong>
+              <p>
+                GitHub Actions pipeline with build, lint, tests, and deploy
+                hooks.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <strong>Lab 5</strong>
+              <p>PostHog events, funnel-ready actions, feature flag support.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Lab 6</strong>
+              <p>
+                Sentry error tracking, tracing, release context, source maps.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
