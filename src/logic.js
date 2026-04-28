@@ -1,4 +1,7 @@
-const bugMode = process.env.BUG_MODE === "1";
+const bugMode =
+  typeof process !== "undefined" &&
+  process.env &&
+  process.env.BUG_MODE === "1";
 
 function formatWelcome(name) {
   const safeName = String(name || "Guest").trim();

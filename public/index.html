@@ -14,5 +14,16 @@
     </main>
     <script src="../src/logic.js"></script>
     <script src="../src/app.js"></script>
+    <script>
+      const status = document.getElementById("status");
+      const button = document.getElementById("cta");
+
+      if (status && status.textContent === "Loading...") {
+        status.textContent = "Welcome, Guest!";
+        button?.addEventListener("click", () => {
+          status.textContent = "You clicked the MVP button.";
+        });
+      }
+    </script>
   </body>
 </html>
