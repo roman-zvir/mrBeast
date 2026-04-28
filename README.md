@@ -1,17 +1,21 @@
 # MrZvir
-
-MrZvir is the simplest project you have ever seen.
+MrZvir is a tiny MVP that shows a single interactive landing page.
 
 ## Tech Stack
-- Node.js
+- HTML
+- CSS
+- JavaScript
 
 ## Project Vision
-A minimal project setup to learn clean repository hygiene and documentation.
+Deliver a minimal, clean frontend skeleton to practice Git workflow and repo hygiene.
 
 ## Installation
 ```bash
 npm install
 ```
+
+## Run Locally
+Open public/index.html in your browser (double-click works).
 
 ## Live Demo
 [Live Demo](#)
