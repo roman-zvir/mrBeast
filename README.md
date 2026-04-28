@@ -15,7 +15,7 @@ npm install
 ```
 
 ## Run Locally
-Open public/index.html in your browser.
+Open public/index.html in your browser (double-click works).
 
 ## Live Demo
 [Live Demo](#)
