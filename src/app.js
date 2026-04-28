@@ -1,12 +1,15 @@
-const status = document.getElementById("status");
-const button = document.getElementById("cta");
-const { formatWelcome, nextMessage } = window.mrzLogic || {
-  formatWelcome: () => "Welcome, Guest!",
-  nextMessage: () => "You clicked the MVP button."
-};
+import { formatWelcome, nextMessage } from './logic.js';
 
-status.textContent = formatWelcome("Guest");
+const status = document.getElementById('status');
+const button = document.getElementById('cta');
+const envStatus = document.getElementById('env-status');
 
-button.addEventListener("click", () => {
+if (envStatus) {
+  envStatus.textContent = `Environment: ${import.meta.env.VITE_APP_STATUS || 'Unknown'}`;
+}
+
+status.textContent = formatWelcome('Guest');
+
+button.addEventListener('click', () => {
   status.textContent = nextMessage(status.textContent);
 });
