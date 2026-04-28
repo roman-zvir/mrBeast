@@ -5,9 +5,9 @@
   "description": "MrZvir MVP demo",
   "type": "module",
   "scripts": {
-    "test": "node --test \"tests/unit/**/*.test.js\"",
-    "test:coverage": "node ./node_modules/c8/bin/c8.js --reporter=html --reporter=text node --test \"tests/unit/**/*.test.js\"",
-    "test:broken": "node ./node_modules/cross-env/src/bin/cross-env.js BUG_MODE=1 node --test \"tests/unit/**/*.test.js\"",
+    "test": "node --test tests/unit/*.test.js",
+    "test:coverage": "node ./node_modules/c8/bin/c8.js --reporter=html --reporter=text node --test tests/unit/*.test.js",
+    "test:broken": "node ./node_modules/cross-env/src/bin/cross-env.js BUG_MODE=1 node --test tests/unit/*.test.js",
     "e2e": "node ./node_modules/@playwright/test/cli.js test",
     "dev": "node ./node_modules/vite/bin/vite.js",
     "build": "node ./node_modules/vite/bin/vite.js build",
