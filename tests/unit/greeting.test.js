@@ -1,6 +1,6 @@
-const { test, mock } = require('node:test');
-const assert = require('node:assert/strict');
-const { getGreeting } = require('../../src/logic');
+import { test, mock } from 'node:test';
+import assert from 'node:assert/strict';
+import { getGreeting } from '../../src/logic.js';
 
 test('getGreeting uses mocked profile', async () => {
   const fetchProfile = mock.fn(async () => ({ name: 'Oleh' }));

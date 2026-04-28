@@ -1,6 +1,12 @@
 # MrZvir
 
+[![CI/CD Pipeline](https://github.com/roman-zvir/mrBeast/actions/workflows/main.yml/badge.svg)](https://github.com/roman-zvir/mrBeast/actions/workflows/main.yml)
+
 MrZvir is a tiny MVP that shows a single interactive landing page.
+
+## Live Demo
+
+[Live Demo на Vercel](https://your-vercel-project-url.vercel.app) (Оновіть це посилання після розгортання)
 
 ## Tech Stack
 
