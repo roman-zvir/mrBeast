@@ -1,5 +1,4 @@
 # MrZvir
-
 MrZvir is a tiny MVP that shows a single interactive landing page.
 
 ## Tech Stack
